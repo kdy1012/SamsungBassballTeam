@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.co.tjeit.samsungbassballteam.SearchIDActivity">
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:background="#004A9C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/ic_launcher_round"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout01"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_edit_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#004D9C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이핀 실명인증"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아이핀으로 본인확인을 합니다."/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher_round"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout02"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_edit_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="#004D9C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="휴대폰 실명인증"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="본인 명의의 휴대폰 번호로
+인증하실 수 있습니다."/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher_round"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
