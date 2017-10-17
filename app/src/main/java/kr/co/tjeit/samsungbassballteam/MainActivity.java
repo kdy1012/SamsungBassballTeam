@@ -10,6 +10,9 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends BaseActivity {
 
+    Uri telUri = Uri.parse("tel://1688-0747");
+    Uri ticketlinkUri = Uri.parse("https://play.google.com/store/apps/details?id=kr.co.ticketlink.cne");
+
     private android.widget.ImageView homeBtn;
     private android.widget.ImageView wishListBtn;
     private android.widget.ImageView myInfoImg;
@@ -48,7 +51,44 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvent() {
 
-        
+        memberShipFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MemberShipActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        moreFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MoreSeeActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        View.OnClickListener ticketLink = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, ticketlinkUri);
+                startActivity(intent);
+            }
+        };
+
+        ticketReserveLayout.setOnClickListener(ticketLink);
+        reserveCheckLayout.setOnClickListener(ticketLink);
+
+
+        callLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, telUri);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

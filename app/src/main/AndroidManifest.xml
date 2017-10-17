@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.co.tjeit.samsungbassballteam">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +22,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SearchIDActivity" />
         <activity android:name=".SearchPWActivity" />
-        <activity android:name=".SeasonSignUpActivity"></activity>
+        <activity android:name=".SeasonSignUpActivity" />
+        <activity android:name=".MoreSeeActivity" />
+        <activity android:name=".MemberShipActivity" />
+        <activity android:name=".fragment.FragmentMemberInfo"></activity>
     </application>
 
 </manifest>

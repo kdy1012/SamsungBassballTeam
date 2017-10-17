@@ -83,7 +83,7 @@
 
         <LinearLayout
             android:id="@+id/searchIdLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#3E91C5"
@@ -108,7 +108,7 @@
 
         <LinearLayout
             android:id="@+id/searchPwLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#385996"
@@ -134,7 +134,7 @@
 
         <LinearLayout
             android:id="@+id/signUpLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#383F96"
