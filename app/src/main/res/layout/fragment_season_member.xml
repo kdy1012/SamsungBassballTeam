@@ -16,11 +16,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="BLUE"
+            android:text="BLUE FAMILY"
             android:textColor="#00A8E0" />
 
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="1dp"
             android:layout_gravity="center"
             android:layout_margin="2dp"
@@ -30,13 +30,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="블루회원"
+            android:text="시즌권회원"
             android:textColor="@color/blue"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="1dp"
             android:layout_gravity="center"
             android:layout_margin="2dp"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:text="가족, 연인, 동료와의 관계개선 및 건전한 여가 문화"
+            android:text="성공적인 비즈니스의 첫 걸음"
             android:textSize="10sp" />
 
 
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="생생한 경기를\n좋은 자리에서"
+                    android:text="회사 내 조직\n팀웍 강화"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="현장응원의 \n즐거움"
+                    android:text="성공적인\n관계 관리"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
@@ -128,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="함께 느끼는\n짜릿함"
+                    android:text="거래처 영업\n전략 강화"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
@@ -162,7 +162,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="바로 관전의\n편리함"
+                    android:text="직원 의욕 및\n사기 진작"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
@@ -187,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center"
-                    android:text="다양한 특전이\n한가득"
+                    android:text="직장 피로\n해소"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
 
@@ -255,16 +255,44 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            android:background="#FFFFFF"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_marginTop="10dp"
+                            <RadioGroup
+                                android:id="@+id/radioGroup"
+                                android:gravity="center"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/memerinfo_blue_why"/>
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radio01"
+                                    android:text="스윗박스"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                                <RadioButton
+                                    android:id="@+id/radio02"
+                                    android:text="개인석"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </RadioGroup>
+
+                            <ListView
+                                android:id="@+id/ListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </ListView>
+
+                            <!---->
+                            <ImageView
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/memerinfo_blue_why2"/>
 
                         </LinearLayout>
 
@@ -278,11 +306,25 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_marginTop="50dp"
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/memerinfo_blue_signup"/>
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </RadioGroup>
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></ListView>
 
                 </LinearLayout>
 
@@ -291,6 +333,5 @@
         </LinearLayout>
 
     </TabHost>
-
 
 </LinearLayout>

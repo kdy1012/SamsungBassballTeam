@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import kr.co.tjeit.samsungbassballteam.fragment.FragmentBlueMember;
 import kr.co.tjeit.samsungbassballteam.fragment.FragmentMemberInfo;
 
 public class MemberShipActivity extends BaseActivity {
@@ -25,7 +26,6 @@ public class MemberShipActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member_ship);
 
-
         bindViews();
         setupEvent();
         setValuse();
@@ -33,6 +33,7 @@ public class MemberShipActivity extends BaseActivity {
 
     @Override
     public void setValuse() {
+
 
 
     }
@@ -52,6 +53,21 @@ public class MemberShipActivity extends BaseActivity {
                                 .commit();
                         infoTxt.setBackgroundResource(R.color.blue);
                         infoTxt.setTextColor(Color.parseColor("#FFFFFF"));
+
+                        blueTxt.setBackgroundResource(R.color.white);
+                        blueTxt.setTextColor(Color.parseColor("#3B46AE"));
+                        break;
+
+                    case R.id.blueTxt:
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragLayout, new FragmentBlueMember())
+                                .commit();
+                        blueTxt.setBackgroundResource(R.color.blue);
+                        blueTxt.setTextColor(Color.parseColor("#FFFFFF"));
+
+                        infoTxt.setBackgroundResource(R.color.white);
+                        infoTxt.setTextColor(Color.parseColor("#3B46AE"));
                         break;
 
                 }
@@ -59,6 +75,7 @@ public class MemberShipActivity extends BaseActivity {
         };
 
         infoTxt.setOnClickListener(fragView);
+        blueTxt.setOnClickListener(fragView);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
