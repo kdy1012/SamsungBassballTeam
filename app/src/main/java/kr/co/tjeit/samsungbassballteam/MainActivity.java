@@ -51,6 +51,14 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvent() {
 
+        shopFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FamilyShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
         memberShipFragLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

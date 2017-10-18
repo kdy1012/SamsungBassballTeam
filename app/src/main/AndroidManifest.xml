@@ -25,7 +25,8 @@
         <activity android:name=".SeasonSignUpActivity" />
         <activity android:name=".MoreSeeActivity" />
         <activity android:name=".MemberShipActivity" />
-        <activity android:name=".fragment.FragmentMemberInfo"></activity>
+        <activity android:name=".fragment.FragmentMemberInfo" />
+        <activity android:name=".FamilyShopActivity"></activity>
     </application>
 
 </manifest>

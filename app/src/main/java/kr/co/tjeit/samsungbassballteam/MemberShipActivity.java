@@ -36,7 +36,6 @@ public class MemberShipActivity extends BaseActivity {
     public void setValuse() {
 
 
-
     }
 
     @Override
