@@ -1,9 +1,9 @@
 package kr.co.tjeit.samsungbassballteam.fragment;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +15,30 @@ import android.widget.RadioGroup;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import kr.co.tjeit.samsungbassballteam.R;
+import kr.co.tjeit.samsungbassballteam.adapter.SeasonMemberAdapter_blue;
+import kr.co.tjeit.samsungbassballteam.adapter.SeasonMemberAdapter_pink;
+import kr.co.tjeit.samsungbassballteam.data.SeasonMemberData;
 
 /**
  * Created by admin on 2017-10-17.
  */
 
-public class FragmentSeasonMember extends Fragment {
+public class FragmentSeasonMember extends android.support.v4.app.Fragment {
 
     Uri telUri = Uri.parse("tel:053-780-3313");
+
+    SeasonMemberAdapter_blue seasonMemberAdapter_blue;
+    SeasonMemberAdapter_pink seasonMemberAdapter_pink;
+
+    List<SeasonMemberData> seasonMemberDatas = new ArrayList<>();
+
+    private int mSelectedRadioPosition;
+    private RadioButton radioButton;
+
     private LinearLayout callLayout;
     private TabWidget tabs;
     private LinearLayout tab1;
@@ -51,7 +66,6 @@ public class FragmentSeasonMember extends Fragment {
         this.tabs = (TabWidget) v.findViewById(android.R.id.tabs);
         this.callLayout = (LinearLayout) v.findViewById(R.id.callLayout);
 
-
         return v;
     }
 
@@ -63,10 +77,28 @@ public class FragmentSeasonMember extends Fragment {
     }
 
     private void setValues() {
+        seasonMemberAdapter_pink = new SeasonMemberAdapter_pink(getActivity(), seasonMemberDatas);
+        ListView.setAdapter(seasonMemberAdapter_pink);
+
+        seasonMemberAdapter_blue = new SeasonMemberAdapter_blue(getActivity(), seasonMemberDatas);
+//        ListView.setAdapter(seasonMemberAdapter_blue);
 
     }
 
     private void setupEvents() {
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int checkId) {
+                if (checkId == R.id.radio01){
+                    ListView.setAdapter(seasonMemberAdapter_pink);
+                }
+                else if (checkId == R.id.radio02) {
+                    ListView.setAdapter(seasonMemberAdapter_blue);
+                }
+            }
+        });
+
         callLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

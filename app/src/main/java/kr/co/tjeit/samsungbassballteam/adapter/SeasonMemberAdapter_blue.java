@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import kr.co.tjeit.samsungbassballteam.data.SeasonMemberData;
  * Created by admin on 2017-10-17.
  */
 
-public class SeasonMemberAdapter_blue extends ArrayAdapter<SeasonMemberData>{
+public class SeasonMemberAdapter_blue extends ArrayAdapter<SeasonMemberData> {
 
     Context mContext;
     List<SeasonMemberData> mList;
@@ -39,12 +40,18 @@ public class SeasonMemberAdapter_blue extends ArrayAdapter<SeasonMemberData>{
             row = inf.inflate(R.layout.season_member_list_blue_item, null);
         }
 
+        TextView roomNameTxt = (TextView) row.findViewById(R.id.roomNameTxt);
+        TextView beforeSaleCostTxt = (TextView) row.findViewById(R.id.beforeSaleCostTxt);
+        TextView allRoomTxt = (TextView) row.findViewById(R.id.allRoomTxt);
+        TextView costTxt = (TextView) row.findViewById(R.id.costTxt);
+        TextView roomTxt = (TextView) row.findViewById(R.id.roomTxt);
+
         return row;
     }
 
     @Override
     public int getCount() {
 
-        return 5;
+        return 10;
     }
 }

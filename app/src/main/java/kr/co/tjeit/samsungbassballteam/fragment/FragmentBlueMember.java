@@ -47,7 +47,6 @@ public class FragmentBlueMember extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         setupEvents();
         setValues();
     }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import kr.co.tjeit.samsungbassballteam.fragment.FragmentBlueMember;
 import kr.co.tjeit.samsungbassballteam.fragment.FragmentMemberInfo;
+import kr.co.tjeit.samsungbassballteam.fragment.FragmentSeasonMember;
 
 public class MemberShipActivity extends BaseActivity {
 
@@ -50,12 +51,15 @@ public class MemberShipActivity extends BaseActivity {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.fragLayout, new FragmentMemberInfo())
-                                .commit();
+                                .commitNow();
                         infoTxt.setBackgroundResource(R.color.blue);
                         infoTxt.setTextColor(Color.parseColor("#FFFFFF"));
 
                         blueTxt.setBackgroundResource(R.color.white);
                         blueTxt.setTextColor(Color.parseColor("#3B46AE"));
+
+                        seasonTxt.setBackgroundResource(R.color.white);
+                        seasonTxt.setTextColor(Color.parseColor("#3B46AE"));
                         break;
 
                     case R.id.blueTxt:
@@ -68,6 +72,24 @@ public class MemberShipActivity extends BaseActivity {
 
                         infoTxt.setBackgroundResource(R.color.white);
                         infoTxt.setTextColor(Color.parseColor("#3B46AE"));
+
+                        seasonTxt.setBackgroundResource(R.color.white);
+                        seasonTxt.setTextColor(Color.parseColor("#3B46AE"));
+                        break;
+
+                    case R.id.seasonTxt:
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.fragLayout, new FragmentSeasonMember())
+                                .commit();
+                        blueTxt.setBackgroundResource(R.color.white);
+                        blueTxt.setTextColor(Color.parseColor("#3B46AE"));
+
+                        infoTxt.setBackgroundResource(R.color.white);
+                        infoTxt.setTextColor(Color.parseColor("#3B46AE"));
+
+                        seasonTxt.setBackgroundResource(R.color.blue);
+                        seasonTxt.setTextColor(Color.parseColor("#FFFFFF"));
                         break;
 
                 }
@@ -76,6 +98,7 @@ public class MemberShipActivity extends BaseActivity {
 
         infoTxt.setOnClickListener(fragView);
         blueTxt.setOnClickListener(fragView);
+        seasonTxt.setOnClickListener(fragView);
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override

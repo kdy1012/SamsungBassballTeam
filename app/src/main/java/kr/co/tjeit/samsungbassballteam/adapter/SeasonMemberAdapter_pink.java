@@ -44,7 +44,6 @@ public class SeasonMemberAdapter_pink extends ArrayAdapter<SeasonMemberData>{
 
     @Override
     public int getCount() {
-
-        return 5;
+        return 10;
     }
 }

@@ -259,37 +259,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <RadioGroup
-                                android:id="@+id/radioGroup"
-                                android:gravity="center"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <RadioButton
-                                    android:id="@+id/radio01"
-                                    android:text="스윗박스"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                                <RadioButton
-                                    android:id="@+id/radio02"
-                                    android:text="개인석"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" />
-
-                            </RadioGroup>
-
-                            <ListView
-                                android:id="@+id/ListView"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                            </ListView>
-
-                            <!---->
                             <ImageView
-                                android:visibility="gone"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/memerinfo_blue_why2"/>
@@ -306,26 +276,35 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+
                     <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <RadioButton
+                            android:checked="true"
+                            android:id="@+id/radio01"
+                            android:text="스윗박스"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
 
                         <RadioButton
+                            android:id="@+id/radio02"
+                            android:text="개인석"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
-
 
                     </RadioGroup>
 
                     <ListView
+                        android:id="@+id/ListView"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"></ListView>
+                        android:layout_height="match_parent">
 
+                    </ListView>
                 </LinearLayout>
 
             </FrameLayout>
