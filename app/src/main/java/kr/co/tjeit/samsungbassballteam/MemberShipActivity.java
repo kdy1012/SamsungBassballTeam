@@ -50,7 +50,7 @@ public class MemberShipActivity extends BaseActivity {
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .replace(R.id.fragLayout, new FragmentMemberInfo())
-                                .commitNow();
+                                .commit();
                         infoTxt.setBackgroundResource(R.color.blue);
                         infoTxt.setTextColor(Color.parseColor("#FFFFFF"));
 
