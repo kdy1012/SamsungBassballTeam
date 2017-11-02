@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 
@@ -18,11 +19,16 @@ public class MoreSeeActivity extends BaseActivity {
     private android.widget.RelativeLayout noticeLayout;
     private android.widget.Switch sw;
     private ImageView ticketBtn;
+    private android.widget.LinearLayout seasonFragLayout;
+    private android.widget.LinearLayout shopFragLayout;
+    private android.widget.LinearLayout memberShipFragLayout;
+    private android.widget.LinearLayout moreFragLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_see);
+
 
         bindViews();
         setupEvent();
@@ -36,6 +42,31 @@ public class MoreSeeActivity extends BaseActivity {
 
     @Override
     public void setupEvent() {
+
+        shopFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FamilyShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        memberShipFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MemberShipActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        moreFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MoreSeeActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +113,10 @@ public class MoreSeeActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
+        this.moreFragLayout = (LinearLayout) findViewById(R.id.moreFragLayout);
+        this.memberShipFragLayout = (LinearLayout) findViewById(R.id.memberShipFragLayout);
+        this.shopFragLayout = (LinearLayout) findViewById(R.id.shopFragLayout);
+        this.seasonFragLayout = (LinearLayout) findViewById(R.id.seasonFragLayout);
         this.sw = (Switch) findViewById(R.id.sw);
         this.noticeLayout = (RelativeLayout) findViewById(R.id.noticeLayout);
         this.changePWLayout = (RelativeLayout) findViewById(R.id.changePWLayout);

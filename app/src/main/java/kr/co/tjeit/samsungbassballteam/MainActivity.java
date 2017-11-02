@@ -23,7 +23,6 @@ public class MainActivity extends BaseActivity {
     private android.widget.LinearLayout myPageLayout;
     private android.widget.LinearLayout gameInfoLayout;
     private android.widget.LinearLayout ticketInfoLayout;
-    private android.widget.LinearLayout eventsLayout;
     private android.widget.ImageView img01;
     private android.widget.ImageView img02;
     private android.widget.LinearLayout callLayout;
@@ -105,12 +104,10 @@ public class MainActivity extends BaseActivity {
         this.moreFragLayout = (LinearLayout) findViewById(R.id.moreFragLayout);
         this.memberShipFragLayout = (LinearLayout) findViewById(R.id.memberShipFragLayout);
         this.shopFragLayout = (LinearLayout) findViewById(R.id.shopFragLayout);
-        this.eventsFragLayout = (LinearLayout) findViewById(R.id.eventsFragLayout);
         this.seasonFragLayout = (LinearLayout) findViewById(R.id.seasonFragLayout);
         this.callLayout = (LinearLayout) findViewById(R.id.callLayout);
         this.img02 = (ImageView) findViewById(R.id.img02);
         this.img01 = (ImageView) findViewById(R.id.img01);
-        this.eventsLayout = (LinearLayout) findViewById(R.id.eventsLayout);
         this.ticketInfoLayout = (LinearLayout) findViewById(R.id.ticketInfoLayout);
         this.gameInfoLayout = (LinearLayout) findViewById(R.id.gameInfoLayout);
         this.myPageLayout = (LinearLayout) findViewById(R.id.myPageLayout);

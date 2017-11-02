@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import kr.co.tjeit.samsungbassballteam.fragment.FragmentBlueMember;
@@ -21,11 +22,16 @@ public class MemberShipActivity extends BaseActivity {
     private android.widget.TextView seasonTxt;
     private ImageView ticketBtn;
     private android.widget.FrameLayout fragLayout;
+    private android.widget.LinearLayout seasonFragLayout;
+    private android.widget.LinearLayout shopFragLayout;
+    private android.widget.LinearLayout memberShipFragLayout;
+    private android.widget.LinearLayout moreFragLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member_ship);
+
 
         bindViews();
         setupEvent();
@@ -40,6 +46,31 @@ public class MemberShipActivity extends BaseActivity {
 
     @Override
     public void setupEvent() {
+
+        shopFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FamilyShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        memberShipFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MemberShipActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        moreFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MoreSeeActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         View.OnClickListener fragView = new View.OnClickListener() {
             @Override
@@ -119,6 +150,10 @@ public class MemberShipActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
+        this.moreFragLayout = (LinearLayout) findViewById(R.id.moreFragLayout);
+        this.memberShipFragLayout = (LinearLayout) findViewById(R.id.memberShipFragLayout);
+        this.shopFragLayout = (LinearLayout) findViewById(R.id.shopFragLayout);
+        this.seasonFragLayout = (LinearLayout) findViewById(R.id.seasonFragLayout);
         this.fragLayout = (FrameLayout) findViewById(R.id.fragLayout);
         this.seasonTxt = (TextView) findViewById(R.id.seasonTxt);
         this.blueTxt = (TextView) findViewById(R.id.blueTxt);

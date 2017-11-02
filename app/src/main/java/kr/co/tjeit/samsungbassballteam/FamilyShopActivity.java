@@ -1,12 +1,12 @@
 package kr.co.tjeit.samsungbassballteam;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -39,11 +39,16 @@ public class FamilyShopActivity extends BaseActivity {
     private android.widget.ListView listView;
     private android.widget.Spinner araeSpinner;
     private android.widget.Spinner sectorsSpinner;
+    private android.widget.LinearLayout seasonFragLayout;
+    private android.widget.LinearLayout shopFragLayout;
+    private android.widget.LinearLayout memberShipFragLayout;
+    private android.widget.LinearLayout moreFragLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_family_shop);
+
         bindViews();
         setValuse();
         setupEvent();
@@ -68,6 +73,30 @@ public class FamilyShopActivity extends BaseActivity {
     @Override
     public void setupEvent() {
 
+        shopFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FamilyShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        memberShipFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MemberShipActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        moreFragLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, MoreSeeActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +118,10 @@ public class FamilyShopActivity extends BaseActivity {
 
     @Override
     public void bindViews() {
+        this.moreFragLayout = (LinearLayout) findViewById(R.id.moreFragLayout);
+        this.memberShipFragLayout = (LinearLayout) findViewById(R.id.memberShipFragLayout);
+        this.shopFragLayout = (LinearLayout) findViewById(R.id.shopFragLayout);
+        this.seasonFragLayout = (LinearLayout) findViewById(R.id.seasonFragLayout);
         this.listView = (ListView) findViewById(R.id.listView);
         this.numberTxt = (TextView) findViewById(R.id.numberTxt);
         this.radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
